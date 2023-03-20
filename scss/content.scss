@@ -1,0 +1,267 @@
+@use './variable.scss' as * ;
+@import './mixin.scss';
+article{
+  width: $full;
+  margin: 0 auto;
+  .box01{
+    background-color: $bl;
+    div{
+      @include layout;
+      display: flex;
+      dl{
+        width: 450px;
+        padding: 150px 60px;
+        color: $ff;
+        dt{
+          font:{
+            size: 43px;
+            weight:bold;
+          }
+          margin-bottom: $normal;
+          span{
+            color: $back;
+          }
+        }
+        dd{
+          font-size: 15px;
+          margin-bottom: 53px;
+        }
+        #btn{
+          display: flex;
+          .start{
+            // border: 1px solid black;
+            // border-radius: 5px;
+            padding: $normal 20px;
+            width:140px;
+            font-weight: bold;
+            margin-right: 5px;
+          }
+          .buy{
+            // border: 1px solid $back;
+            // border-radius: 5px;
+            width: 140px;
+            background-color: $back;
+            color: black;
+            padding: $normal 20px;
+            font-weight: bold;
+          }
+        }
+      }
+      /* swiper */
+.swiper{
+  width: 100%; 
+  height: 600px;
+  margin: 10px 0;
+}
+.swiper-slide {
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+/* nth */
+.swiper .no01 {
+  background:url(../images/picbig01.jpg) no-repeat center top;
+  background-size: 100%;}
+.swiper .no02 {
+  background:url(../images/picbig02.jpg) no-repeat center top;
+  background-size: 100%;}
+.swiper .no03 {
+  background:url(../images/picbig03.jpg) no-repeat center top;
+  background-size: 100%;}
+.swiper .no04 {
+  background:url(../images/picbig04.jpg) no-repeat center top;
+  background-size: 100%;}
+.swiper-pagination{
+  position: absolute;
+  top: 570px; left: 300px;
+}
+      // #pic{
+      //   img{
+      //     width: 600px; height: 500px;
+      //   }
+      //   width: 600px; height: 500px;
+      //   margin: $small;
+      // }
+    }
+  }
+  .box02{
+    padding: 60px 0;
+    // background-color: burlywood;
+    h2{
+      @include layout;
+      padding: $normal 0;
+      color: #514d4d;
+      font:{
+        size:$normal;
+        weight:bold;
+      }
+    }
+  }
+  .box03{
+    background-color: $cc;
+    div{
+      @include layout;
+      color: $ff;
+      padding: calc($large * 2) 0;
+      dl{
+        dt{
+          font-size: 38px;
+          margin-bottom: 16px;
+        }
+        #ddd{
+          margin-bottom: $large;
+        }
+        #dddd{
+          color: $sub;
+          margin-bottom: 36px;
+        }
+      }
+      .p{
+        width :130px;
+        border: 1px solid $back;
+        font-weight: bold;
+        background-color: $back;
+        padding: 12px $large;
+        color: $bl;
+        &:hover{
+          background-color: black;
+          border: 1px solid black;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .box04{
+    padding: 60px 0;
+    // background-color: beige;
+    h2{
+      @include layout;
+      font-size: $normal;
+      font-weight: bold;
+      padding: 35px 0;
+      color: #514d4d;
+    }
+  }
+  .box05{
+    background-color: $back;
+    color: black;
+    div{
+      @include layout;
+      padding: 50px 0;
+      h2{
+        font-size: 35px;
+        margin-bottom: $normal * 2;
+        span{
+          font-size: 35px;
+          font-weight: bold;
+        }
+      }
+      div{
+        display: flex;
+        p{
+          background-image: url(../images/ear2.jpg);
+          background-repeat: no-repeat;
+          width: 440px;
+          height: 150px;
+          border: 5px solid #3c3c3c;
+          // background-color: #4f4f4f;
+          border-radius: 50%;
+          margin-right: $large;
+          // &:hover{
+          //   background-color: $aa;
+          // }
+        }
+        dl{
+          dt{
+            margin-bottom:$normal ;
+            line-height:$normal;
+          }
+        }
+      }
+    }
+  }
+  .box06{
+    padding: 60px 0;
+    // background-color: bisque;
+    h2{
+      @include layout;
+      padding: $normal 0;
+      font-size: $normal;
+      font-weight: bold;
+      color: #514d4d;
+    }
+  }
+  .fig{
+    display: flex;
+    @include layout;
+    justify-content: space-between;
+    figure{
+      position: relative;
+      img{
+        width: 250px;
+        height: 300px;
+        margin-bottom: 26px;
+        // &:hover{
+        //   background-image: url(../images/pic01.jpg);
+        // }
+      }
+      figcaption{
+        text-align: center;
+        dl{
+          dt{
+            font-size: 15px;
+            margin-bottom: 8px;
+          }
+          dd{
+            font-size: 14px;
+            margin-bottom: 19px;
+            color: $sub;
+            &:nth-child(3){
+              color: $back;
+            }
+          }
+          .label{
+            right: 10px;
+            position: absolute;
+            bottom: 170px;
+            b{
+              width: 36px;
+              border-radius: 50%;
+              color: $ff;
+              display: block;
+              line-height: 38px;
+              background-color: $back;
+              font-size: 12px;
+              text-align: center;
+            }
+          }
+        }
+        .add{
+          width: 130px;
+          margin: 0 auto;
+          border: 1px solid $back;
+          padding: 9px 16px;
+          background-color: $back;
+          margin-bottom: 25px;
+          font-weight: bold;
+          &:hover{
+            background-color: $bl;
+            border: 1px solid $bl;
+            color: $ff;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}

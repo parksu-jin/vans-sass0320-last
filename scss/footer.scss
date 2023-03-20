@@ -1,0 +1,11 @@
+@use './variable.scss' as * ;
+@import './mixin.scss';
+
+footer{
+  background-color: $cc;
+  div{
+    @include layout;
+    padding: 25px 0;
+    color: $sub;
+  }
+}

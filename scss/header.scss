@@ -1,0 +1,64 @@
+@use './variable.scss' as * ;
+@import './mixin.scss';
+
+header{
+  @include layout;
+  display: flex;
+  position: relative;
+  h1{
+    img{
+     width: 150px;
+     padding: 15px 0;
+    }
+  }
+  nav{
+    position: absolute;
+    right: 0; top: $large;
+    ul{
+      display: flex;
+      li{
+        margin-left: $large;
+        position: relative;
+        padding-bottom:10px;
+        z-index: 1000;
+        a{
+          color: black;
+          font-size: 15px;
+          font-weight: bold;
+          &:hover{
+            color: $back;
+           
+          }
+        }
+        span{
+          position: absolute;
+          display: block;
+          width: $full;
+          height: 1px;
+          left:0; bottom:0;
+        }
+        &:hover{
+          span{
+            background-color: $back;
+          }
+          }
+        }
+        ul{
+          position: absolute;
+          left: 0; top: 70px;
+          width: 100%;
+          display: none;
+          li{
+            border-bottom: 1px solid #fff;
+            text-align: center;
+            a{
+              font-size: 19px;
+              line-height: 47px;
+              color: #3c3c3c;
+              background-color: $back;
+            }
+          }
+        }
+      }
+    }
+  }
